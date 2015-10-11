@@ -1,0 +1,36 @@
+body {
+	font-family: Verdana, sans-serif;
+}
+
+#formTable {
+	text-align: right;
+}
+
+#item_add, #add_test_data {
+	margin: 3px 10px 3px 125px;
+	width: 120px;
+}
+
+
+#orderTable {
+	text-align: left;
+}
+
+th {
+	border-bottom: 1px dashed black;
+}
+
+
+#results{
+	text-align: right;
+	margin-left: 350px;
+}
+
+li {
+	font-weight: bold;
+	list-style-type: none;
+}
+
+.red {
+	color: red;
+}

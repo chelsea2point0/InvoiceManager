@@ -1,0 +1,46 @@
+Sales tax is assumed to be at rate of 6.25%
+
+TEST DATA 1
+Item Code: B402
+Product Name: Bumper Sticker
+Cost: 5
+Quantity; 2
+Line Cost: 10
+
+	Subtotal: 10
+	Sales Tax: 0.63
+	Total: 10.63
+
+-------------------------------------
+
+TEST DATA 2
+Item Code: T348
+Product Name: Long-Sleeved T-shirt
+Cost: 15
+Quantity; 4
+Line Cost: 60
+
+	Subtotal: 60
+	Sales Tax: 3.75
+	Total: 63.75
+
+-------------------------------------
+	
+TEST DATA 3
+Item Code: N129
+Product Name: Notebook
+Cost: 6
+Quantity: 8
+Line Cost: 48
+
+	Subtotal: 48
+	Sales Tax: 3
+	Total: 51
+
+-------------------------------------
+
+ALL ITEMS ADDED TO CURRENT INVOICE
+	Subtotal: 118
+	Sales Tax: 7.38
+	Total: 125.38
+

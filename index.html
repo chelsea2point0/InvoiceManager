@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project 1 Chelsea Schaefer</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>
+<noscript>
+	<meta http-equiv="refresh" content="0; url=noscript.html">
+</noscript>
+</head>
+<body>
+<h1>Invoice Manager</h1>
+<form name="invoiceForm">
+	<table id="formTable">
+		<tr>
+			<td><label>Item Code: </label></td>
+			<td><input type="text" id="item_code" name="code"></td>
+		</tr>
+		<tr>
+			<td><label>Item Name: </label></td>
+			<td><input type="text" id="item_name" name="name"></td>
+		</tr>
+		<tr>
+			<td><label>Item Cost ($): </label></td>
+			<td><input type="number" id="item_cost" name="cost"></td>
+		</tr>
+		<tr>
+			<td><label>Quantity: </label></td>
+			<td><input type="number" id="item_quantity" name="quantity"></td>
+		</tr>
+	</table>
+	<input type="button" id="item_add" value="Add Item"><br>
+</form>
+<br>
+<a href="noscript.html" target="_blank">Product and Pricing Lookup</a>
+<h2>Current Invoice</h2>
+<hr>
+<table id="orderTable">
+	<tr>
+		<th width="100">Item Code</th>
+		<th width="250">Item Name</th>
+		<th width="100">Item Cost</th>
+		<th width="40">Qty</th>
+		<th width="100">Line Cost</th>
+	</tr>	
+</table>
+<hr>
+<table id="results">
+	<tr>
+		<td><label>Subtotal: </label></td>
+		<td><input type="text" id="subTotal"></td>
+	</tr>
+	<tr>
+		<td><label>Sales Tax: </label></td>
+		<td><input type="text" id="tax"></td>
+	</tr>
+	<tr>
+		<td><label>Total: </label></td>
+		<td><input type="text" id="total"></td>
+	</tr>
+</table>
+</body>
+</html>

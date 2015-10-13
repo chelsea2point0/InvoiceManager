@@ -75,45 +75,45 @@ var validate = function(tempItemObj) {
 // draw the table
 var draw = function(itemObj) {
 	var table = document.getElementById("orderTable");
-	/*if (itemObj.redraw > -1) { 
-		table.deleteRow(parseInt(itemObj.redraw + 1));
-	}*/
-
-
+	// loop to prevent repeated table entries
 	while(table.rows.length > 1) {
   		table.deleteRow(1);
 	}
 
 	for (var row = 0; row < itemObj.code.length; row++) {
-		var newRow = table.insertRow(1);
-		for (var c=0; c < 5; c++) {
+		// insertRow value of -1 inserts new line item in last position
+		var newRow = table.insertRow(-1);
+		for (var c=0; c < 6; c++) {
 			var pos = "cell" + (c + 1);
 			var pos = newRow.insertCell([c]);
-				switch(c) {
-					case 0: 
-						pos.innerHTML = itemObj.code[row];
-						break;
-					case 1: 
-						pos.innerHTML = itemObj.name[row];
-						break;
-					case 2: 
-						pos.innerHTML = itemObj.cost[row];
-						break;
-					case 3: 
-						pos.innerHTML = itemObj.quantity[row];
-						break;
-					case 4: 
-						pos.innerHTML = "$" + itemObj.lineCost[row];
-						break;
-				}	
+			switch(c) {
+				case 0: 
+					pos.innerHTML = itemObj.code[row];
+					break;
+				case 1: 
+					pos.innerHTML = itemObj.name[row];
+					break;
+				case 2: 
+					pos.innerHTML = itemObj.cost[row];
+					break;
+				case 3: 
+					pos.innerHTML = itemObj.quantity[row];
+					break;
+				case 4: 
+					pos.innerHTML = "$" + itemObj.lineCost[row];
+					break;
+				case 5:
+					pos.innerHTML = "<input type='checkbox' onclick='deleteRow(this)'>remove</input>";
+			}	
 		}
 	}
 }
+
+// function to calculate subtotal, tax, and total for invoice
 function calcTotal(itemObj) {
 	var sum = 0;
 	for (var p = 0; p < itemObj.code.length; p++) {
 		sum += parseInt(itemObj.lineCost[p]);
-		// add up all line costs and put in subtotal box
 	}
 	var subTotal = document.getElementById("subTotal");
 	subTotal.value = "$" + sum;
@@ -124,4 +124,18 @@ function calcTotal(itemObj) {
 	// calc total based on subtotal + tax and put in total box
 	var total = document.getElementById("total");
 	total.value = "$" + (sum + taxAmnt).toFixed(2);
+}
+
+// function to remove an entry
+function deleteRow(self) {
+	var row = self.parentNode.parentNode;
+	row.parentNode.removeChild(row);
+	var removed = row.rowIndex;
+	itemObj.code.splice(removed, 1);
+	itemObj.name.splice(removed, 1);
+	itemObj.cost.splice(removed, 1);
+	itemObj.quantity.splice(removed, 1);
+	itemObj.lineCost.splice(removed, 1);
+	console.log(itemObj);
+	calcTotal(itemObj);
 }

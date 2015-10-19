@@ -1,46 +1,46 @@
-Sales tax is assumed to be at rate of 6.25%
+Sales tax is assumed to be at rate of 5%. Sales tax and total are calculated to 2 decimal points.
 
 TEST DATA 1
-Item Code: B402
-Product Name: Bumper Sticker
-Cost: 5
-Quantity; 2
-Line Cost: 10
+Item Code: LSC493
+Product Name: In the Loop Scarf
+Cost: 8.50
+Quantity: 2
+Line Cost: 17
 
-	Subtotal: 10
-	Sales Tax: 0.63
-	Total: 10.63
+	Subtotal: 17
+	Sales Tax: 0.85
+	Total: 17.85
 
 -------------------------------------
 
 TEST DATA 2
-Item Code: T348
-Product Name: Long-Sleeved T-shirt
-Cost: 15
+Item Code: LGL851
+Product Name: Let it Go Leggings
+Cost: 10
 Quantity; 4
-Line Cost: 60
+Line Cost: 40
 
-	Subtotal: 60
-	Sales Tax: 3.75
-	Total: 63.75
+	Subtotal: 40
+	Sales Tax: 2.00
+	Total: 42.00
 
 -------------------------------------
 	
 TEST DATA 3
-Item Code: N129
-Product Name: Notebook
-Cost: 6
-Quantity: 8
-Line Cost: 48
+Item Code: SDD402
+Product Name: Seas the Day Dress
+Cost: 25
+Quantity: 3
+Line Cost: 75
 
-	Subtotal: 48
-	Sales Tax: 3
-	Total: 51
+	Subtotal: 75
+	Sales Tax: 3.75
+	Total: 78.75
 
 -------------------------------------
 
 ALL ITEMS ADDED TO CURRENT INVOICE
-	Subtotal: 118
-	Sales Tax: 7.38
-	Total: 125.38
+	Subtotal: 132
+	Sales Tax: 6.60
+	Total: 138.60
 

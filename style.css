@@ -1,16 +1,27 @@
 body {
 	font-family: Verdana, sans-serif;
+	padding: 0 10px 0 10px;
+}
+
+.container {
+	max-width: 850px;
+	margin: auto;
 }
 
 #formTable {
 	text-align: right;
 }
 
-#item_add, #add_test_data {
+#item_add {
+	border-radius: 10px;
+	background-color: #9DD2D8;
 	margin: 3px 10px 3px 125px;
 	width: 120px;
 }
 
+#item_add:focus {
+	outline: none;
+}
 
 #orderTable {
 	text-align: left;
@@ -19,7 +30,6 @@ body {
 th {
 	border-bottom: 1px dashed black;
 }
-
 
 #results{
 	text-align: right;
@@ -32,5 +42,21 @@ li {
 }
 
 .red {
-	color: red;
+	color: #FF5930;
+	font-weight: bold;
+}
+
+button {
+	background: transparent;
+	border-radius: 10px;
+}
+
+#thankYou {
+	text-transform: uppercase;
+	font-style: italic;
+	text-align: center;
+}
+
+#products {
+	text-align: left;
 }
